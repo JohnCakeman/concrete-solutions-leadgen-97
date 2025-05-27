@@ -1,11 +1,44 @@
 
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { toast } from "@/components/ui/sonner";
 
 const Hero = () => {
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const videoSources = [
+    "/cocrete.webm",
+    "/concrete1.webm",
+    "/concrete2.webm"
+  ];
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleVideoEnd = () => {
+      setCurrentVideoIndex((prevIndex) => 
+        (prevIndex + 1) % videoSources.length
+      );
+    };
+
+    video.addEventListener('ended', handleVideoEnd);
+    
+    return () => {
+      video.removeEventListener('ended', handleVideoEnd);
+    };
+  }, [videoSources.length]);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.load();
+      video.play().catch(console.error);
+    }
+  }, [currentVideoIndex]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,9 +54,18 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative bg-gradient-to-b from-concrete-700 to-concrete-900 text-white">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518005020951-eccb494ad742')] bg-cover bg-center opacity-20"></div>
-      <div className="relative container mx-auto pt-10 pb-20 px-4 sm:pt-16 sm:pb-28 md:pt-24 md:pb-32">
+    <div className="relative bg-gradient-to-b from-concrete-700 to-concrete-900 text-white overflow-hidden">
+      <video
+        ref={videoRef}
+        className="absolute inset-0 w-full h-full object-cover opacity-30"
+        muted
+        playsInline
+        autoPlay
+      >
+        <source src={videoSources[currentVideoIndex]} type="video/webm" />
+      </video>
+      <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+      <div className="relative container mx-auto pt-10 pb-20 px-4 sm:pt-16 sm:pb-28 md:pt-24 md:pb-32 z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="heading-xl mb-4 animate-fade-in">
             Бетонный завод под ключ <span className="text-blue-300">за 30 дней</span> с гарантией
