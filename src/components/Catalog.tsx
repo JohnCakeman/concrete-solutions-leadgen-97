@@ -52,7 +52,7 @@ const Catalog = () => {
       type: "Мобильный",
       productivity: "30 м³/час",
       price: "2 950 000",
-      image: "/lovable-uploads/56c161e3-1e9c-4b2b-a29a-c33146cfb175.png",
+      image: "https://images.unsplash.com/photo-1460574283810-2aab119d8511",
       features: [
         "Мобильность и компактность",
         "Быстрый монтаж/демонтаж",
