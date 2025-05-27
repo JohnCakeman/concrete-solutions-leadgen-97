@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import CatalogItem, { PlantProps } from "./CatalogItem";
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -51,7 +52,7 @@ const Catalog = () => {
       type: "Мобильный",
       productivity: "30 м³/час",
       price: "2 950 000",
-      image: "/lovable-uploads/3d9af570-b63c-44bd-80b5-bd54e43edd05.png",
+      image: "/lovable-uploads/5c8387e3-c900-46cf-b190-b3639b863875.png",
       features: [
         "Мобильность и компактность",
         "Быстрый монтаж/демонтаж",
@@ -79,7 +80,7 @@ const Catalog = () => {
       type: "Мини",
       productivity: "15 м³/час",
       price: "1 890 000",
-      image: "/lovable-uploads/5f2e9c83-c72c-4356-9d71-01488c6389dc.png",
+      image: "/lovable-uploads/0983df5a-dde8-4624-bb71-c04a4730caae.png",
       features: [
         "Экономичный вариант",
         "Минимальная площадь размещения",
