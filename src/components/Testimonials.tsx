@@ -22,7 +22,7 @@ const Testimonials = () => {
       position: "Генеральный директор",
       content: "Сотрудничаем уже более 3 лет. Приобрели два бетонных завода MEKAMIX. Работают без нареканий, отличная производительность и надежность. Особенно ценим оперативность сервисной поддержки и качество монтажа.",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3",
-      projectImage: "https://images.unsplash.com/photo-1433086966358-54859d0ed716"
+      projectImage: "/lovable-uploads/4e7903eb-ca9d-4dc0-b474-283c109fbd73.png"
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ const Testimonials = () => {
       position: "Руководитель производства",
       content: "Заказывали мобильный завод для удаленного строительного объекта. Установка и запуск прошли точно в срок, без задержек. Завод работает уже 2 года, никаких проблем не возникало. Довольны сотрудничеством.",
       image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3",
-      projectImage: "https://images.unsplash.com/photo-1487958449943-2429e8be8625"
+      projectImage: "/lovable-uploads/d00d559f-b248-4e3b-b67b-8ce4d4a8e98a.png"
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const Testimonials = () => {
       position: "Технический директор",
       content: "Приобрели стационарный завод MEKAMIX-60 в прошлом году. Впечатляет автоматизация процессов и высокая точность дозирования. Отдельно хочу отметить квалификацию специалистов, проводивших шефмонтаж.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3",
-      projectImage: "https://images.unsplash.com/photo-1460574283810-2aab119d8511"
+      projectImage: "/lovable-uploads/eff22ff6-3a58-4f96-8fbc-89d48b5ce700.png"
     },
   ];
 
